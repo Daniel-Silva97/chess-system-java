@@ -1,6 +1,7 @@
 package boardgame;
 
 public class Board {
+
     private int rows;
     private int columns;
     private Piece[][] pieces;
@@ -38,7 +39,7 @@ public class Board {
 
     public void placePiece(Piece piece, Position position) {
         if (thereIsAPiece(position)) {
-            throw new BoardException("There is already a piece on position (" + position + ")");
+            throw new BoardException("There is already a piece on position " + position);
         }
         pieces[position.getRow()][position.getColumn()] = piece;
         piece.position = position;
